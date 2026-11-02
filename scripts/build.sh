@@ -10,6 +10,7 @@ mkdir -p "$DIST_DIR"
 rsync -a \
   --exclude ".git" \
   --exclude "dist" \
+  --exclude "AUDYT-LABOR-TECH.*" \
   --exclude ".DS_Store" \
   "$ROOT_DIR/" "$DIST_DIR/"
 

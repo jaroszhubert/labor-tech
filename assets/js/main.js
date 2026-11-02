@@ -147,7 +147,7 @@
       close();
     });
     window.addEventListener('resize', () => {
-      if (window.innerWidth > 980) close(true);
+      if (window.innerWidth > 1120) close(true);
     });
 
     // Start closed
@@ -161,6 +161,20 @@
     const onScroll = () => header.classList.toggle('is-scrolled', window.scrollY > 18);
     onScroll();
     window.addEventListener('scroll', onScroll, { passive: true });
+  }
+
+  // Keep answers and the cooperation form available without JavaScript;
+  // collapse them on small screens once native disclosure controls are ready.
+  const responsiveDetails = Array.from(document.querySelectorAll('[data-responsive-details]'));
+  if (responsiveDetails.length && window.matchMedia) {
+    const compactLayout = window.matchMedia('(max-width: 760px)');
+    const updateDetails = () => {
+      responsiveDetails.forEach((detail) => {
+        detail.open = !compactLayout.matches;
+      });
+    };
+    updateDetails();
+    compactLayout.addEventListener('change', updateDetails);
   }
 
   // Scroll reveal (premium)

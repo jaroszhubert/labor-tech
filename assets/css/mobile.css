@@ -1,0 +1,332 @@
+/* Native disclosures stay open on desktop and when JavaScript is unavailable. */
+.mobile-contact-dock { display: none; }
+.cooperation-details { border: 0; }
+.cooperation-details > summary { display: none; }
+.faq-item { padding: 28px 0; border-top: 1px solid var(--line); }
+.faq-item > summary { list-style: none; cursor: pointer; font-size: 21px; font-weight: 600; line-height: 1.35; letter-spacing: -0.025em; color: var(--navy); }
+.faq-item > summary::-webkit-details-marker { display: none; }
+.faq-item > p { margin: 14px 0 0; color: var(--muted); }
+
+@media (min-width: 761px) and (max-width: 1120px) {
+  .audit-page .menu-btn { display: inline-grid !important; }
+  .audit-page .mobile-panel { display: block !important; }
+  .audit-page .mobile-panel[hidden] { display: none !important; }
+}
+
+@media (max-width: 760px) {
+  body.audit-page { padding-bottom: calc(69px + env(safe-area-inset-bottom)); }
+
+  body.audit-page .site-header {
+    padding: 8px 0 !important;
+    background: #fbfaf7 !important;
+    border-bottom: 1px solid #e4e4df !important;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+  }
+  body.audit-page .site-header > .container.header-inner {
+    display: flex !important;
+    min-height: 44px !important;
+    padding-inline: 20px !important;
+    gap: 16px;
+  }
+  .audit-page .brand { margin-right: auto; }
+  .audit-page .site-header .brand-badge img { width: 128px !important; }
+  .audit-page .site-header .menu-btn { width: 42px; height: 42px; border-radius: 50%; background: transparent; box-shadow: none; }
+  .audit-page .header-actions { margin: 0; }
+  body.audit-page.menu-open .brand-badge img { filter: none; }
+
+  body.audit-page .mobile-panel {
+    top: 60px !important;
+    height: auto !important;
+    min-height: 0 !important;
+    max-height: calc(100dvh - 60px) !important;
+    padding: 14px 20px 24px !important;
+    background: #fbfaf7 !important;
+    border-bottom: 1px solid var(--line);
+    box-shadow: 0 20px 30px rgba(0, 35, 55, 0.08);
+    transition: transform 0.22s ease;
+  }
+  body.audit-page .mobile-panel[hidden] { display: none; }
+  .audit-page .mobile-card a,
+  .audit-page .mobile-card a[aria-current='page'] {
+    padding: 16px 0;
+    font-size: 22px;
+    line-height: 1.2;
+    color: var(--navy);
+    border-bottom-color: var(--line);
+  }
+  .audit-page .mobile-card .mobile-cta {
+    margin-top: 20px;
+    padding: 14px 20px;
+    border: 0;
+    border-radius: 4px;
+    background: var(--navy);
+    color: #fff;
+    font-size: 12px;
+  }
+  body.audit-page.menu-open::before {
+    display: block;
+    position: fixed;
+    inset: 60px 0 0;
+    z-index: 998;
+    background: rgba(0, 26, 41, 0.22);
+    backdrop-filter: none;
+  }
+
+  .mobile-contact-dock {
+    display: grid;
+    grid-template-columns: minmax(0, 1.9fr) minmax(0, 1fr);
+    align-items: center;
+    gap: 12px;
+    position: fixed;
+    inset: auto 0 0;
+    z-index: 900;
+    padding: 12px 20px calc(12px + env(safe-area-inset-bottom));
+    border-top: 1px solid #dedfd9;
+    background: #fbfaf7;
+  }
+  .mobile-contact-dock a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 44px;
+    border: 1px solid var(--line);
+    border-radius: 4px;
+    color: var(--navy);
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0;
+  }
+  .mobile-contact-dock .mobile-contact-dock__call { background: var(--navy); color: #fff; border-color: var(--navy); }
+  body.audit-page.menu-open .mobile-contact-dock { visibility: hidden; }
+
+  .audit-page .btn,
+  .audit-page .hero--premium .btn,
+  .audit-page .hero--compact .btn {
+    width: auto;
+    min-height: 44px;
+    padding: 13px 18px;
+    border-radius: 4px;
+    box-shadow: none;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0;
+    text-transform: none;
+    line-height: 1.4;
+  }
+  .audit-page .hero-actions,
+  .audit-page:not(.home) .hero--compact .hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .audit-page .btn--ghost { background: transparent; }
+  .audit-page .section-kicker { font-size: 9px; letter-spacing: 0.13em; line-height: 1.5; }
+  .audit-page .section-kicker::before { width: 18px; }
+
+  .home.audit-page :is(.profile-section, .certificates-teaser-section, .services-section, .process-section, .tech-section, .contact-section, .faq-section),
+  .audit-page:not(.home) .section { padding: 52px 0; }
+  .home.audit-page :is(.hero, .services-section, .tech-section, .faq-section),
+  .audit-page:not(.home) .hero { background: #fbfaf7; }
+  .home.audit-page .profile-section { background: #f2f0e9; }
+  .home.audit-page :is(.hero, .profile-section, .certificates-teaser-section, .services-section, .process-section, .tech-section, .contact-section, .faq-section) [data-reveal],
+  .audit-page:not(.home) main [data-reveal] {
+    opacity: 1 !important;
+    transform: none !important;
+    filter: none !important;
+    animation: none !important;
+  }
+  .home.audit-page :is(.profile-section, .certificates-teaser-section, .services-section, .process-section, .tech-section, .faq-section) h2,
+  .home.audit-page #kontakt h2,
+  .audit-page:not(.home) .section h2 {
+    font-family: 'Iowan Old Style', 'Palatino Linotype', 'Book Antiqua', Georgia, serif;
+    font-size: 34px;
+    font-weight: 400;
+    line-height: 1.08;
+    letter-spacing: -0.035em;
+    text-wrap: balance;
+  }
+  .home.audit-page :is(.services-section, .process-section, .tech-section, .faq-section) .section-head,
+  .audit-page:not(.home) .section-head {
+    display: block;
+    margin-bottom: 28px;
+    padding-bottom: 0;
+    border: 0;
+    text-align: left;
+  }
+  .home.audit-page :is(.services-section, .process-section, .tech-section, .faq-section) .section-head > p,
+  .home.audit-page .section-head > div > p:not(.section-kicker),
+  .audit-page:not(.home) .section-head > p { margin: 16px 0 0; font-size: 14px; line-height: 1.7; }
+
+  .patient-signpost { padding-top: 60px; background: #f0eee7; }
+  .patient-signpost__inner { display: flex; align-items: baseline; gap: 12px; padding-block: 10px; border: 0; font-size: 11px; }
+  .patient-signpost__inner > span { display: inline; margin: 0; font-size: 8px; letter-spacing: 0.09em; }
+  .patient-signpost a { text-underline-offset: 3px; }
+
+  .home.audit-page .hero--premium { padding: 28px 0 36px !important; }
+  .home.audit-page .hero--premium .hero-grid { gap: 24px; }
+  .home.audit-page .hero-meta-line { display: block; margin: 0 0 14px; }
+  .home.audit-page .hero-meta-line > .meta-dot,
+  .home.audit-page .hero-meta-line > span:last-child { display: none; }
+  .home.audit-page .hero--premium .hero-copy .eyebrow {
+    display: block;
+    padding: 0;
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+    font-size: 9px;
+    letter-spacing: 0.14em;
+    line-height: 1.5;
+  }
+  .home.audit-page .hero--premium .eyebrow::before { display: none; }
+  .home.audit-page .hero--premium h1 {
+    font-family: 'Iowan Old Style', 'Palatino Linotype', 'Book Antiqua', Georgia, serif;
+    font-size: clamp(39px, 11.9vw, 51px);
+    font-weight: 400;
+    letter-spacing: -0.045em;
+    line-height: 1.04;
+  }
+  .home.audit-page .hero-sub { margin-top: 18px; padding-top: 0; border: 0; gap: 18px; }
+  .home.audit-page .hero--premium .lead { font-size: 14px !important; line-height: 1.7; }
+  .home.audit-page .hero--premium .hero-actions .btn { width: auto; padding-inline: 18px; }
+  .home.audit-page .hero--premium .hero-actions .btn--ghost { display: none; }
+  .home.audit-page .hero--premium .hero-media { height: 214px; max-height: none; aspect-ratio: auto; border-radius: 2px !important; }
+  .home.audit-page .hero--premium .hero-media img { object-position: 50% 63%; transform: none; }
+
+  .materials-strip { background: #fbfaf7; }
+  .materials-strip__inner { display: block; padding-block: 22px; }
+  .materials-strip__inner > p { margin-bottom: 14px; font-size: 8px; }
+  .materials-strip ul { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; }
+  .materials-strip li { font-size: 13px; letter-spacing: -0.04em; line-height: 1.3; }
+  .materials-strip li span { margin-top: 5px; font-size: 9px; }
+
+  .home.audit-page .profile-shell { display: grid; grid-template-columns: minmax(0, 1fr) 104px; gap: 0 20px; align-items: start; }
+  .home.audit-page .profile-copy { display: contents; }
+  .home.audit-page .profile-copy > .section-kicker { grid-column: 1; grid-row: 1; margin: 0 0 14px; font-size: 8px; }
+  .home.audit-page .profile-copy > h2 { grid-column: 1; grid-row: 2; margin: 0 0 16px; max-width: none; font-size: 30px; }
+  .home.audit-page .profile-shell > .hero-photo { grid-column: 2; grid-row: 1 / 3; width: 104px; height: 160px; margin: 0; object-fit: cover; object-position: center 25%; border-radius: 2px; }
+  .home.audit-page .profile-copy > p:not(.section-kicker),
+  .home.audit-page .profile-copy > ul,
+  .home.audit-page .profile-copy > .hero-actions { grid-column: 1 / -1; }
+  .home.audit-page .profile-copy > p:not(.section-kicker) { margin: 16px 0 0; font-size: 14px; line-height: 1.75; }
+  .home.audit-page .profile-copy .feature-list { margin: 22px 0; }
+  .home.audit-page .profile-copy .feature-list li { padding: 12px 0; font-size: 12px; line-height: 1.65; }
+  .home.audit-page .profile-copy .hero-actions { margin-top: 0; }
+
+  .home.audit-page .trust-teaser { gap: 28px; }
+  .home.audit-page .trust-teaser h2 { margin-top: 14px; }
+  .home.audit-page .trust-teaser__copy > p:not(.section-kicker) { font-size: 14px; line-height: 1.75; }
+  .home.audit-page .trust-teaser__grid { display: flex; gap: 0; padding-top: 20px; border-top: 1px solid rgba(255, 255, 255, 0.22); }
+  .home.audit-page .training-entry { flex: 1; padding: 0 12px; border: 0; border-left: 1px solid rgba(255, 255, 255, 0.2); }
+  .home.audit-page .training-entry:first-child { padding-left: 0; border: 0; }
+  .home.audit-page .training-entry > p:not(.trust-card__title) { display: none; }
+  .home.audit-page .training-entry .trust-card__title { margin: 0; color: #fff; font-size: 13px; }
+
+  .restoration-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+  .restoration-feature figure,
+  .restoration-feature--ceramic figure { margin-bottom: 16px; aspect-ratio: 4 / 5; }
+  .restoration-feature .section-kicker { font-size: 8px; letter-spacing: 0.04em; }
+  .restoration-feature .section-kicker::before { display: none; }
+  .restoration-feature h3 { margin: 10px 0; font-size: 17px; font-weight: 600; line-height: 1.25; letter-spacing: -0.03em; }
+  .restoration-feature__copy > p:not(.section-kicker) { margin-bottom: 12px; font-size: 13px; line-height: 1.65; }
+  .restoration-feature .text-link { display: inline-flex; align-items: center; min-height: 44px; font-size: 12px; }
+  .service-index { gap: 0; margin-top: 28px; padding-top: 24px; }
+  .service-index > .section-kicker { margin-bottom: 12px; }
+  .service-index > a { display: grid; grid-template-columns: 90px minmax(0, 1fr); gap: 16px; padding: 16px 0; border-top: 1px solid var(--line); }
+  .service-index h3 { font-size: 14px; }
+  .service-index a p { margin: 0; font-size: 12px; line-height: 1.7; }
+
+  .lab-process { gap: 0; }
+  .lab-process li { display: grid; grid-template-columns: 34px minmax(0, 1fr); gap: 8px 16px; padding: 24px 0; }
+  .lab-process li:last-child { padding-bottom: 0; }
+  .lab-process__number { grid-column: 1; grid-row: 1 / 3; margin: 0; font-size: 25px; line-height: 1.2; }
+  .lab-process h3 { grid-column: 2; margin: 0; font-size: 18px; }
+  .home.audit-page .lab-process p { grid-column: 2; margin: 0; font-size: 13px; line-height: 1.75; }
+  .process-contact { margin-top: 24px; font-size: 12px; line-height: 1.7; }
+
+  .home.audit-page .tech-section__shell { display: block; }
+  .home.audit-page .tech-section__visuals { display: none; }
+  .home.audit-page .tech-section__materials > .section-kicker,
+  .home.audit-page .tech-section__lead { display: none; }
+  .home.audit-page .tech-section__materials .tech-section__materials-title { margin: 0 0 20px; font-size: 20px; line-height: 1.3; }
+  .home.audit-page .tech-section__material-list li { padding: 14px 0; }
+  .home.audit-page .tech-section__material-label { font-size: 13px; font-weight: 500; }
+
+  .patient-note { padding: 32px 0; background: #f2f0e9; }
+  .patient-note__inner { gap: 18px; }
+  .patient-note h2 { font-family: 'Iowan Old Style', Georgia, serif; font-size: 28px; font-weight: 400; }
+  .patient-note p:not(.section-kicker) { font-size: 13px; line-height: 1.7; }
+  .patient-note .btn { width: auto; }
+
+  .home.audit-page .contact-section__grid { display: block; }
+  .home.audit-page #kontakt .contact-panel { overflow: visible; }
+  .home.audit-page #kontakt { scroll-margin-top: 80px; }
+  .home.audit-page #kontakt h2 { margin: 14px 0; max-width: 14ch; }
+  .home.audit-page #kontakt .contact-panel > p { font-size: 14px; line-height: 1.75; }
+  .home.audit-page .order-guide { display: none; }
+  .cooperation-details { margin-top: 24px; }
+  .cooperation-details > summary { display: flex; justify-content: space-between; align-items: center; min-height: 48px; padding: 13px 16px; border-radius: 4px; background: var(--navy); color: #fff; cursor: pointer; list-style: none; font-size: 13px; font-weight: 550; }
+  .cooperation-details > summary::-webkit-details-marker { display: none; }
+  .cooperation-details > summary::after { content: '+'; margin-left: 20px; font-size: 23px; font-weight: 400; line-height: 1; }
+  .cooperation-details[open] > summary::after { content: '−'; }
+  .home.audit-page #kontakt .field-row { grid-template-columns: 1fr; gap: 18px; }
+  .home.audit-page #kontakt .form-field :is(input, textarea, select) { font-size: 16px; min-height: 48px; border-radius: 2px; }
+  .home.audit-page #kontakt .form-field textarea { min-height: 120px; }
+  .home.audit-page #kontakt .form-field label { font-size: 12px; }
+  .home.audit-page #kontakt .form-help { font-size: 11px; line-height: 1.7; }
+
+  .audit-page .information-grid:has(.faq-item) { display: block; }
+  .audit-page .faq-item { margin: 0; padding: 0; border: 0; border-top: 1px solid var(--line); background: transparent; }
+  .audit-page .faq-item:last-child { border-bottom: 1px solid var(--line); }
+  .audit-page .faq-item > summary { display: flex; align-items: center; justify-content: space-between; gap: 20px; min-height: 64px; padding: 18px 0; font-size: 15px; font-weight: 550; line-height: 1.5; letter-spacing: -0.02em; }
+  .audit-page .faq-item > summary::after { content: '+'; flex: 0 0 16px; font-size: 23px; font-weight: 400; line-height: 1; }
+  .audit-page .faq-item[open] > summary::after { content: '−'; }
+  .audit-page .information-grid > .faq-item > p { margin: 0; padding: 0 28px 22px 0; color: var(--muted); font-size: 14px; line-height: 1.75; }
+
+  .audit-page:not(.home) .hero--compact { padding: 94px 0 36px !important; }
+  .audit-page:not(.home) .hero--compact .hero-grid { gap: 26px; }
+  .audit-page:not(.home) .hero--compact .eyebrow { margin: 0 0 14px; }
+  .audit-page:not(.home) .hero--compact h1 { margin: 0; font-family: 'Iowan Old Style', 'Palatino Linotype', Georgia, serif; font-size: clamp(36px, 11vw, 46px); font-weight: 400; line-height: 1.05; letter-spacing: -0.04em; }
+  .audit-page:not(.home) .hero--compact .lead { margin: 18px 0 24px; font-size: 14px !important; line-height: 1.75; }
+  .audit-page:not(.home) .hero--compact .hero-media { height: 220px; margin: 0; aspect-ratio: auto; }
+  .audit-page.contact-page .hero-media,
+  .audit-page.privacy-page .hero-media { display: none; }
+  .audit-page.contact-page .hero-actions a { max-width: 100%; overflow-wrap: anywhere; }
+  .audit-page.contact-page .contact-overview-shell > .card { padding: 0; border: 0; background: transparent; box-shadow: none; }
+  .audit-page.about-page .hero--compact .hero-media { height: 290px; }
+  .audit-page.about-page .hero-media img { object-position: center 22%; }
+  .audit-page:not(.home) .split { gap: 32px; }
+  .audit-page:not(.home) .section p { font-size: 14px; line-height: 1.75; }
+  .audit-page .information-grid > .card { padding-block: 22px; }
+  .audit-page .information-grid h3 { font-size: 18px; }
+  .audit-page .tag-list li { padding: 12px 0; font-size: 13px; }
+  .clinical-specs dt, .repair-menu dt { font-size: 18px; font-weight: 550; }
+  .clinical-specs dd, .repair-menu dd { font-size: 14px; line-height: 1.75; }
+  .clinical-specs > div, .repair-menu > div { gap: 10px; padding-block: 22px; }
+  .repair-priority { padding-block: 24px; }
+  .repair-priority h2 { font-size: 20px; }
+  .repair-priority p { font-size: 13px; line-height: 1.75; }
+  .repair-assessment-simple { gap: 30px; }
+  .repair-assessment-simple h3 { font-size: 20px; }
+  .repair-steps { font-size: 14px; }
+  .audit-page .certificates-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .audit-page .certificate-card { grid-template-columns: minmax(0, 1fr); grid-template-rows: auto 1fr; min-width: 0; }
+  .audit-page .certificate-card__media { aspect-ratio: 1 / 1.4; min-height: 0; padding: 8px; border-right: 0; }
+  .audit-page .certificate-card__content { min-width: 0; padding: 14px 10px; }
+  .audit-page .certificate-card__title { font-size: 11px; line-height: 1.5; overflow-wrap: anywhere; }
+  .audit-page .certificates-note { font-size: 11px !important; }
+
+  .site-footer.site-footer--complete { padding: 36px 0 24px; }
+  .site-footer--complete .footer-grid { grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr); gap: 28px 24px; padding-bottom: 28px; }
+  .site-footer--complete .footer-brand { grid-column: 1 / -1; }
+  .site-footer--complete .footer-name { font-size: 26px; }
+  .site-footer--complete .footer-name span { display: inline; margin-left: 8px; font-size: 16px; }
+  .site-footer--complete .footer-brand p { margin-top: 12px; font-size: 12px; }
+  .site-footer--complete .footer-label { margin-bottom: 14px; font-size: 9px; }
+  .site-footer--complete .footer-contact > a { margin-bottom: 12px; font-size: 12px; }
+  .site-footer--complete .footer-contact .footer-phone { font-size: 16px; }
+  .site-footer--complete .footer-contact p { margin-top: 14px; font-size: 12px; }
+  .site-footer--complete .footer-nav a { min-height: 36px; font-size: 12px; }
+  .site-footer--complete .footer-bottom { gap: 10px; padding-top: 20px; }
+  .site-footer--complete .footer-bottom small, .site-footer--complete .footer-bottom a { font-size: 11px; }
+}

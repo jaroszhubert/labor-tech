@@ -1,0 +1,1180 @@
+/* Audit refinements. Review markup and review styling are intentionally untouched. */
+.audit-page .site-header > .container.header-inner {
+  gap: 24px;
+  padding-inline: var(--gutter) !important;
+}
+
+/* A consistent rhythm for the edited content; reviews retain their layout. */
+.home.audit-page :is(.profile-section, .certificates-teaser-section, .services-section, .process-section, .tech-section, .contact-section, .faq-section),
+.audit-page:not(.home) .section {
+  padding: 96px 0;
+}
+
+.home.audit-page :is(.profile-section, .certificates-teaser-section, .services-section, .process-section, .tech-section, .contact-section, .faq-section) .section-kicker,
+.audit-page:not(.home) .section .section-kicker {
+  margin: 0 0 16px;
+}
+
+.home.audit-page :is(.profile-section, .certificates-teaser-section, .services-section, .process-section, .tech-section, .contact-section, .faq-section) h2,
+.audit-page:not(.home) .section h2 {
+  margin: 0 0 20px;
+}
+
+.audit-page:not(.home) .section-head {
+  gap: 48px;
+  margin-bottom: 36px;
+  padding-bottom: 28px;
+}
+
+.home.audit-page :is(.services-section, .process-section, .tech-section, .faq-section) .section-head > :only-child,
+.audit-page:not(.home) .section-head > :only-child {
+  grid-column: 1 / -1;
+  max-width: 760px;
+}
+
+.audit-page:not(.home) .hero--compact {
+  padding: 128px 0 72px;
+}
+
+.audit-page:not(.home) .hero--compact .hero-grid {
+  align-items: center;
+  gap: 64px;
+}
+
+.audit-page:not(.home) .hero--compact .eyebrow {
+  margin: 0 0 20px;
+}
+
+.audit-page:not(.home) .hero--compact h1 {
+  margin: 0 0 24px;
+}
+
+.audit-page:not(.home) .hero--compact .lead {
+  margin: 0 0 28px;
+}
+
+.patient-signpost {
+  padding-top: 92px;
+  background: var(--pearl-soft);
+}
+
+.patient-signpost__inner {
+  display: flex;
+  align-items: baseline;
+  gap: 28px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid var(--line);
+  font-size: 13px;
+}
+
+.patient-signpost__inner > span {
+  flex-shrink: 0;
+  color: var(--muted);
+  font-size: 10px;
+  font-weight: 650;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.patient-signpost a,
+.text-link {
+  text-decoration: underline;
+  text-decoration-color: var(--champagne-deep);
+  text-underline-offset: 5px;
+}
+
+.home.audit-page .hero--premium {
+  padding-top: 56px;
+  padding-bottom: 80px;
+}
+
+.home.audit-page .hero--premium .hero-grid {
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr);
+  gap: 64px;
+  align-items: center;
+}
+
+.home.audit-page .hero--premium h1 {
+  max-width: none;
+  font-size: clamp(3rem, 5.6vw, 5.5rem);
+  line-height: 1.04;
+  letter-spacing: -0.055em;
+}
+
+.home.audit-page .hero-meta-line {
+  margin-bottom: 28px;
+  gap: 14px;
+  letter-spacing: 0.12em;
+}
+
+.home.audit-page .hero-meta-line .eyebrow {
+  font-size: 10px;
+  letter-spacing: 0.14em;
+}
+
+.home.audit-page .hero-sub {
+  margin-top: 28px;
+  padding-top: 24px;
+  gap: 24px;
+}
+
+.home.audit-page .hero--premium .lead {
+  margin: 0;
+  max-width: 53ch;
+  font-size: 17px;
+}
+
+.home.audit-page .hero--premium .hero-media {
+  margin: 0;
+  aspect-ratio: 4 / 5;
+}
+
+.materials-strip {
+  border-block: 1px solid var(--line);
+  background: var(--white);
+}
+
+.materials-strip__inner {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: 32px;
+  align-items: center;
+  padding-block: 27px;
+}
+
+.materials-strip__inner > p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.materials-strip ul {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.materials-strip li {
+  font-size: 21px;
+  font-weight: 550;
+  letter-spacing: -0.035em;
+}
+
+.materials-strip li span {
+  color: var(--muted);
+  font-size: 13px;
+  letter-spacing: 0;
+}
+
+.home.audit-page .profile-shell {
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr);
+  align-items: center;
+}
+
+.home.audit-page .profile-copy h2,
+.home.audit-page .trust-teaser h2,
+.home.audit-page .services-section h2,
+.home.audit-page .process-section h2,
+.home.audit-page .tech-section h2,
+.home.audit-page .contact-section h2,
+.home.audit-page .faq-section h2 {
+  font-size: clamp(2rem, 3.6vw, 3.45rem);
+  line-height: 1.12;
+  text-wrap: balance;
+}
+
+.home.audit-page .profile-copy p {
+  max-width: 60ch;
+}
+
+.home.audit-page .profile-copy > p:not(.section-kicker) + p {
+  margin-top: 16px;
+}
+
+.home.audit-page .profile-copy h2 {
+  max-width: 16ch;
+}
+
+.home.audit-page .profile-copy .hero-actions,
+.home.audit-page .trust-teaser__copy .hero-actions {
+  margin-top: 24px;
+}
+
+.home.audit-page .profile-copy .feature-list {
+  padding: 0;
+  margin: 28px 0;
+}
+
+.home.audit-page .profile-copy .feature-list li {
+  padding: 13px 0;
+}
+
+.home.audit-page .profile-copy .feature-list li::before {
+  display: none;
+}
+
+.home.audit-page .profile-shell .hero-photo {
+  width: 100%;
+  max-height: 640px;
+  object-fit: cover;
+  object-position: center 30%;
+}
+
+.home.audit-page .trust-teaser__grid {
+  display: block;
+  border: 0;
+  background: transparent;
+}
+
+.training-entry {
+  padding: 22px 0;
+  border-top: 1px solid var(--line);
+}
+
+.training-entry:first-child {
+  padding-top: 0;
+  border-top: 0;
+}
+
+.training-entry p {
+  margin: 8px 0 0;
+}
+
+.training-entry .trust-card__title {
+  margin-top: 0;
+}
+
+.home.audit-page .training-entry {
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.home.audit-page .certificates-teaser-section .btn {
+  background: var(--champagne);
+  color: var(--navy);
+}
+
+.home.audit-page .services-section .section-head,
+.home.audit-page .process-section .section-head,
+.home.audit-page .tech-section .section-head {
+  grid-template-columns: minmax(0, 1.35fr) minmax(0, 0.65fr);
+  gap: 48px;
+  margin-bottom: 36px;
+  padding-bottom: 28px;
+}
+
+.home.audit-page .services-section .section-head > p,
+.home.audit-page .process-section .section-head > p {
+  margin: 0;
+}
+
+.restoration-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(0, 0.85fr);
+  gap: 40px;
+  align-items: start;
+}
+
+.restoration-feature {
+  display: block;
+  min-width: 0;
+}
+
+.restoration-feature--ceramic {
+  padding-top: 48px;
+}
+
+.restoration-feature figure {
+  overflow: hidden;
+  margin: 0 0 24px;
+  aspect-ratio: 4 / 3;
+  background: var(--platinum-soft);
+}
+
+.restoration-feature--ceramic figure {
+  aspect-ratio: 1;
+}
+
+.restoration-feature img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.restoration-feature:hover {
+  text-decoration: none;
+}
+
+.restoration-feature:hover img {
+  transform: scale(1.025);
+}
+
+.restoration-feature:hover .text-link {
+  text-decoration-color: var(--navy);
+}
+
+.restoration-feature h3 {
+  margin: 12px 0;
+  font-size: clamp(1.5rem, 2.2vw, 2.1rem);
+  font-weight: 500;
+  letter-spacing: -0.035em;
+  line-height: 1.2;
+}
+
+.restoration-feature__copy > p:not(.section-kicker) {
+  max-width: 48ch;
+  margin: 0 0 20px;
+  font-size: 15px;
+}
+
+.text-link {
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.service-index {
+  display: grid;
+  grid-template-columns: 0.9fr repeat(3, 1fr);
+  gap: 32px;
+  margin-top: 40px;
+  padding-top: 28px;
+  border-top: 1px solid var(--line);
+}
+
+.service-index .section-kicker {
+  display: block;
+  margin: 0;
+  line-height: 1.7;
+}
+
+.service-index .section-kicker::before {
+  display: none;
+}
+
+.service-index h3 {
+  margin: 0;
+  font-size: 19px;
+  font-weight: 550;
+  letter-spacing: -0.02em;
+}
+
+.service-index a p {
+  margin: 10px 0 0;
+  font-size: 14px;
+}
+
+.lab-process {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 32px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.lab-process li {
+  min-width: 0;
+  padding-top: 24px;
+  border-top: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.lab-process__number {
+  display: block;
+  margin-bottom: 32px;
+  color: var(--champagne);
+  font-size: 48px;
+  font-weight: 400;
+  letter-spacing: -0.06em;
+  line-height: 1;
+}
+
+.lab-process h3 {
+  margin: 0 0 16px;
+  color: var(--white);
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 1.3;
+  letter-spacing: -0.02em;
+}
+
+.home.audit-page .lab-process p,
+.home.audit-page .process-section .section-head > p {
+  color: #c6d1d7;
+  font-size: 15px;
+}
+
+.process-contact {
+  display: inline-block;
+  margin-top: 36px;
+  color: var(--champagne);
+  font-size: 14px;
+  text-decoration: underline;
+  text-underline-offset: 5px;
+}
+
+.home.audit-page .tech-section__visual-card,
+.home.audit-page .tech-section__support-card,
+.home.audit-page .tech-section__materials {
+  padding: 0;
+  border: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+.home.audit-page .tech-section__shell {
+  padding: 0;
+  gap: 48px;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+.home.audit-page .tech-section__shell::before {
+  display: none;
+}
+
+.home.audit-page .tech-section__visual-main,
+.home.audit-page .tech-section__hero-image,
+.home.audit-page .tech-section__thumb {
+  border: 0;
+  border-radius: 4px;
+  box-shadow: none;
+}
+
+.home.audit-page .tech-section__hero-image {
+  height: auto;
+  max-height: 440px;
+  aspect-ratio: 4 / 3;
+}
+
+.home.audit-page .tech-section__visual-caption,
+.home.audit-page .tech-section__support-copy,
+.home.audit-page .tech-section__lead {
+  max-width: none;
+}
+
+.home.audit-page .tech-section__visual-caption strong,
+.home.audit-page .tech-section__support-copy strong {
+  color: var(--navy);
+}
+
+.home.audit-page .tech-section__visual-caption p,
+.home.audit-page .tech-section__support-copy p {
+  color: var(--muted);
+}
+
+.home.audit-page .tech-section__material-list {
+  display: block;
+}
+
+.home.audit-page .tech-section__material-index {
+  flex-basis: 26px;
+  width: 26px;
+  height: auto;
+  padding-top: 3px;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  color: var(--muted);
+}
+
+.home.audit-page .tech-section__visual-caption {
+  padding: 24px 0 0;
+}
+
+.home.audit-page .tech-section__support-card {
+  padding-top: 28px;
+  border-top: 1px solid var(--line);
+}
+
+.home.audit-page .tech-section__material-list li {
+  border-radius: 0;
+  border: 0;
+  border-top: 1px solid var(--line);
+  padding: 18px 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+.patient-note {
+  padding: 48px 0;
+  background: var(--pearl-soft);
+  border-block: 1px solid var(--line);
+}
+
+.patient-note__inner {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.patient-note h2 {
+  margin: 12px 0;
+  font-size: clamp(1.5rem, 2.5vw, 2.3rem);
+  line-height: 1.2;
+  font-weight: 500;
+  letter-spacing: -0.035em;
+}
+
+.patient-note p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.patient-note .btn {
+  flex-shrink: 0;
+}
+
+.home.audit-page .contact-section__grid {
+  grid-template-columns: minmax(0, 1.3fr) minmax(0, 0.7fr);
+  gap: 56px;
+}
+
+.home.audit-page .contact-panel {
+  padding: 0;
+  border: 0;
+  background: transparent;
+}
+
+.home.audit-page #kontakt .contact-panel {
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+.home.audit-page #kontakt .contact-panel::before {
+  display: none;
+}
+
+.home.audit-page #kontakt :is(h2, p, label, .section-kicker, .form-help, .form-help a) {
+  color: var(--navy);
+}
+
+.home.audit-page #kontakt .form-field :is(input, textarea, select) {
+  border: 0;
+  border-bottom: 1px solid rgba(0, 35, 55, 0.35);
+  border-radius: 0;
+  background: rgba(255, 255, 255, 0.35);
+  color: var(--navy);
+}
+
+.home.audit-page #kontakt .form-field :is(input, textarea)::placeholder {
+  color: #46505a;
+}
+
+.home.audit-page .faq-section {
+  background: var(--pearl-soft);
+}
+
+.home.audit-page .faq-section::before,
+.home.audit-page .faq-card::before {
+  display: none;
+}
+
+.home.audit-page .faq-section__head {
+  text-align: left;
+}
+
+.home.audit-page .faq-section__head > div {
+  margin: 0;
+  max-width: none;
+}
+
+.home.audit-page .faq-section__head h2,
+.home.audit-page .faq-section__head .section-kicker {
+  color: var(--navy);
+}
+
+.home.audit-page .faq-section__head p {
+  color: var(--muted);
+}
+
+.home.audit-page .faq-section .information-grid > .faq-card {
+  background: transparent;
+}
+
+.order-guide {
+  padding-top: 6px;
+}
+
+.order-guide__list {
+  padding: 0;
+  margin: 32px 0;
+  list-style: none;
+  counter-reset: order;
+}
+
+.order-guide__list li {
+  position: relative;
+  padding: 20px 0 20px 36px;
+  border-top: 1px solid rgba(0, 35, 55, 0.2);
+  counter-increment: order;
+}
+
+.order-guide__list li::before {
+  content: '0' counter(order);
+  position: absolute;
+  left: 0;
+  top: 22px;
+  font-size: 11px;
+}
+
+.order-guide__list strong,
+.order-guide__list span {
+  display: block;
+}
+
+.order-guide__list strong {
+  font-weight: 600;
+}
+
+.order-guide__list span {
+  margin-top: 8px;
+  font-size: 14px;
+}
+
+.order-guide__contact {
+  font-size: 14px;
+  overflow-wrap: anywhere;
+}
+
+.order-guide__contact a {
+  display: inline-block;
+  margin-top: 12px;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+/* Flat information layouts apply only to explicitly marked grids. */
+.audit-page .information-grid {
+  gap: 0 48px;
+}
+
+.audit-page .information-grid > .card,
+.audit-page .information-grid > .card-link {
+  min-height: 0;
+  margin: 0;
+  padding: 28px 0;
+  border: 0;
+  border-top: 1px solid var(--line);
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+.audit-page .information-grid > .card-link:hover h2,
+.audit-page .information-grid > .card-link:hover h3 {
+  text-decoration: underline;
+  text-underline-offset: 5px;
+}
+
+.audit-page .information-grid h2,
+.audit-page .information-grid h3 {
+  margin: 0 0 14px;
+  font-size: clamp(1.25rem, 2vw, 1.75rem);
+  line-height: 1.25;
+  letter-spacing: -0.025em;
+}
+
+.audit-page .information-grid p {
+  margin: 0;
+}
+
+.audit-page:not(.home) .hero--compact h1 {
+  max-width: 17ch;
+  font-size: clamp(2.4rem, 4.8vw, 4.4rem);
+  line-height: 1.06;
+  letter-spacing: -0.045em;
+  text-wrap: balance;
+}
+
+.audit-page:not(.home) .hero--compact .lead {
+  font-size: 17px;
+}
+
+.about-page .split > .card,
+.clinic-page .clinic-overview-shell > .card,
+.service-detail-page .detail-overview-shell > .card {
+  padding: 0;
+  border: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+.audit-page:not(.home) .section h2 {
+  font-size: clamp(1.8rem, 3.3vw, 3rem);
+  line-height: 1.15;
+  letter-spacing: -0.035em;
+  text-wrap: balance;
+}
+
+.about-page .hero-media img {
+  object-position: center 30%;
+}
+
+.audit-page .clinical-specs,
+.repair-menu {
+  margin: 0 0 40px;
+}
+
+.clinical-specs > div,
+.repair-menu > div {
+  display: grid;
+  grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+  gap: 56px;
+  padding: 28px 0;
+  border-top: 1px solid var(--line);
+}
+
+.clinical-specs dt,
+.repair-menu dt {
+  color: var(--navy);
+  font-size: 22px;
+  font-weight: 500;
+  letter-spacing: -0.025em;
+  line-height: 1.35;
+}
+
+.clinical-specs dd,
+.repair-menu dd {
+  margin: 0;
+  max-width: 65ch;
+  color: var(--muted);
+}
+
+.audit-page .tag-list {
+  display: block;
+  padding: 0;
+  margin: 18px 0 0;
+  list-style: none;
+}
+
+.audit-page .tag-list li {
+  padding: 12px 0;
+  border: 0;
+  border-top: 1px solid var(--line);
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+  font-size: 15px;
+}
+
+.audit-page .timeline .step b,
+.audit-page .timeline .num {
+  color: var(--navy);
+}
+
+.audit-page .timeline .step span {
+  color: var(--muted);
+}
+
+.audit-page .timeline .num {
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+}
+
+.audit-page [id="cyrkon"],
+.audit-page [id="e-max"],
+.audit-page [id="zakres-pomocy"] {
+  scroll-margin-top: 110px;
+}
+
+.repair-priority {
+  padding: 32px 0;
+  background: var(--champagne-soft);
+  border-block: 1px solid var(--line);
+}
+
+.repair-priority__inner {
+  display: grid;
+  grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+  gap: 56px;
+  align-items: baseline;
+}
+
+.repair-priority h2 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 550;
+  letter-spacing: -0.035em;
+  line-height: 1.3;
+}
+
+.repair-priority p {
+  margin: 0;
+}
+
+.repair-priority a {
+  font-weight: 650;
+  white-space: nowrap;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.repair-assessment-simple {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 0.8fr);
+  gap: 64px;
+  align-items: start;
+}
+
+.repair-assessment-simple aside {
+  padding-top: 24px;
+  border-top: 1px solid var(--line);
+}
+
+.repair-assessment-simple h3 {
+  margin: 0 0 18px;
+  font-size: 24px;
+  font-weight: 500;
+  letter-spacing: -0.025em;
+  line-height: 1.3;
+}
+
+.repair-steps {
+  margin: 28px 0;
+  padding-left: 20px;
+  color: var(--muted);
+}
+
+.repair-steps li {
+  padding: 8px 0 8px 12px;
+}
+
+.audit-page .mobile-card a:focus-visible {
+  outline-color: var(--champagne);
+}
+
+body.audit-page.menu-open .header-inner {
+  z-index: 1001;
+}
+
+body.audit-page.menu-open .brand-badge img {
+  filter: brightness(0) invert(1);
+}
+
+body.audit-page.menu-open .menu-btn {
+  background: var(--pearl);
+}
+
+body.audit-page.menu-open .header-cta {
+  visibility: hidden;
+}
+
+/* Footer content is always visible and never participates in scroll reveals. */
+.site-footer.site-footer--complete {
+  margin: 0;
+  padding: 64px 0 24px;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  background: var(--navy-deep);
+  color: #c8d3da;
+}
+
+.site-footer--complete .footer-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1.2fr) minmax(0, 0.7fr);
+  gap: 56px;
+  padding-bottom: 40px;
+}
+
+.site-footer--complete a {
+  color: inherit;
+  overflow-wrap: anywhere;
+}
+
+.site-footer--complete a:hover,
+.site-footer--complete a:focus-visible {
+  color: var(--white);
+}
+
+.site-footer--complete .footer-name {
+  display: inline-block;
+  color: var(--white);
+  font-size: 30px;
+  font-weight: 500;
+  line-height: 1.15;
+  letter-spacing: -0.035em;
+}
+
+.site-footer--complete .footer-name span {
+  display: block;
+  margin-top: 6px;
+  font-size: 18px;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+}
+
+.site-footer--complete .footer-brand p {
+  max-width: 28ch;
+  margin: 18px 0 0;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.site-footer--complete .footer-label {
+  margin: 0 0 18px;
+  color: #e0e6e9;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.13em;
+  line-height: 1.5;
+  text-transform: uppercase;
+}
+
+.site-footer--complete .footer-contact > a {
+  display: block;
+  width: fit-content;
+  max-width: 100%;
+  margin-bottom: 12px;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.site-footer--complete .footer-contact .footer-phone {
+  color: var(--white);
+  font-size: 22px;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+}
+
+.site-footer--complete .footer-contact p {
+  margin: 18px 0 0;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.site-footer--complete .footer-nav a {
+  display: block;
+  width: fit-content;
+  min-height: 32px;
+  padding: 5px 0;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.site-footer--complete .footer-bottom {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px 32px;
+  padding-top: 24px;
+  border-top: 1px solid rgba(255, 255, 255, 0.16);
+}
+
+.site-footer--complete .footer-bottom small,
+.site-footer--complete .footer-bottom a {
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+@media (min-width: 1121px) {
+  .audit-page .menu-btn {
+    display: none;
+  }
+}
+
+@media (max-width: 1280px) {
+  .audit-page .pill {
+    display: none;
+  }
+}
+
+@media (max-width: 1120px) {
+  .home.audit-page :is(.profile-section, .certificates-teaser-section, .services-section, .process-section, .tech-section, .contact-section, .faq-section),
+  .audit-page:not(.home) .section {
+    padding: 72px 0;
+  }
+
+  .audit-page:not(.home) .hero--compact .hero-grid {
+    gap: 40px;
+  }
+
+  .site-footer--complete .footer-grid {
+    gap: 32px;
+  }
+
+  .home.audit-page .hero--premium .hero-grid,
+  .home.audit-page .profile-shell,
+  .home.audit-page .contact-section__grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .home.audit-page .hero--premium .hero-media {
+    max-height: 540px;
+    aspect-ratio: 16 / 9;
+  }
+
+  .home.audit-page .hero--premium .hero-media img {
+    object-position: center 62%;
+  }
+
+  .home.audit-page .profile-shell .hero-photo {
+    max-width: 520px;
+    max-height: 600px;
+  }
+
+  .materials-strip__inner {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .service-index {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .service-index > .section-kicker {
+    grid-column: 1 / -1;
+  }
+
+  .home.audit-page .services-section .section-head,
+  .home.audit-page .process-section .section-head,
+  .home.audit-page .tech-section .section-head {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .lab-process {
+    gap: 28px;
+  }
+
+  .patient-note__inner {
+    align-items: start;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .repair-assessment-simple {
+    gap: 48px;
+  }
+}
+
+@media (max-width: 760px) {
+  .patient-signpost {
+    padding-top: 76px;
+  }
+
+  .patient-signpost__inner {
+    display: block;
+    font-size: 12px;
+  }
+
+  .patient-signpost__inner > span {
+    display: block;
+    margin-bottom: 5px;
+  }
+
+  .home.audit-page .hero--premium {
+    padding: 40px 0 56px !important;
+  }
+
+  .home.audit-page .hero--premium h1 {
+    font-size: clamp(2.35rem, 8.7vw, 4rem);
+  }
+
+  .home.audit-page .hero--premium .hero-media {
+    max-height: 460px;
+    aspect-ratio: 4 / 3;
+  }
+
+  .home.audit-page .hero-meta-line {
+    gap: 10px;
+    font-size: 10px;
+  }
+
+  .materials-strip ul {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px 24px;
+  }
+
+  .materials-strip li {
+    font-size: 19px;
+  }
+
+  .materials-strip li span {
+    display: block;
+    font-size: 12px;
+  }
+
+  .restoration-grid,
+  .lab-process,
+  .service-index,
+  .clinical-specs > div,
+  .repair-menu > div,
+  .repair-priority__inner,
+  .repair-assessment-simple {
+    grid-template-columns: 1fr;
+  }
+
+  .restoration-grid {
+    gap: 40px;
+  }
+
+  .restoration-feature--ceramic {
+    padding-top: 0;
+  }
+
+  .restoration-feature--ceramic figure {
+    aspect-ratio: 4 / 3;
+  }
+
+  .service-index {
+    gap: 24px;
+    margin-top: 40px;
+  }
+
+  .lab-process {
+    gap: 32px;
+  }
+
+  .lab-process__number {
+    margin-bottom: 18px;
+    font-size: 40px;
+  }
+
+  .audit-page .information-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .clinical-specs > div,
+  .repair-menu > div,
+  .repair-priority__inner {
+    gap: 12px;
+  }
+
+  .patient-note {
+    padding: 36px 0;
+  }
+
+  .patient-note .btn {
+    width: 100%;
+    padding-inline: 14px;
+    font-size: 12px;
+  }
+
+  .home.audit-page .hero--premium .btn {
+    padding-inline: 16px;
+  }
+
+  .audit-page:not(.home) .hero--compact h1 {
+    font-size: clamp(2.1rem, 9vw, 3.4rem);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .restoration-feature img {
+    transition: none;
+  }
+}

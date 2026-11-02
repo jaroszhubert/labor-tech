@@ -91,7 +91,8 @@
       }
 
       const widgetId = grecaptcha.render(slot, {
-        sitekey: slot.dataset.sitekey
+        sitekey: slot.dataset.sitekey,
+        size: window.matchMedia('(max-width: 380px)').matches ? 'compact' : 'normal'
       });
 
       slot.dataset.widgetId = String(widgetId);
